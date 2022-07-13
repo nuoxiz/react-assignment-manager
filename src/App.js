@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddForm from "./components/AddForm";
+import Footer from "./components/Footer";
 function App() {
   const [tasks, setTasks] = useState("");
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);
@@ -19,44 +20,6 @@ function App() {
     setShowAddTaskForm(!showAddTaskForm);
   };
 
-  // const addParagraph = async () => {
-  //   const res = await fetch("http://localhost/5001/tasks");
-  //   const data = (await res).json;
-  //   return `<p>${data}</p>`;
-  // };
-  // const addParagraph2 = async () => {
-  //   return `<p>Hello</p>`;
-  // };
-  // const tasks = [
-  //   {
-  //     id: 1,
-  //     text: "Mini Program",
-  //     module: "Intro to Prog",
-  //     day: "Feb 5th at 2:30pm",
-  //     reminder: true,
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "Meeting at School",
-  //     module: "Intro to Prog",
-  //     day: "Feb 6th at 1:30pm",
-  //     reminder: true,
-  //   },
-  //   {
-  //     text: "Task 2",
-  //     day: "sdas",
-  //     module: "Intro to Prog",
-  //     reminder: true,
-  //     id: 3,
-  //   },
-  //   {
-  //     text: "sdasd",
-  //     day: "sadas",
-  //     module: "Intro to Prog",
-  //     reminder: false,
-  //     id: 4,
-  //   },
-  // ];
   const fetchTasks = async () => {
     const res = await fetch("http://localhost:5001/tasks");
     const data = await res.json();
@@ -94,7 +57,7 @@ function App() {
     });
     /**
      * fetch() return the updated data because method:"PUT"
-     * 
+     *
      */
     const data = await res.json();
     setTasks(
@@ -125,6 +88,7 @@ function App() {
           onToggleReminder={toggleReminder}
         />
       )}
+      <Footer />
     </div>
   );
 }

@@ -1,18 +1,25 @@
 {
   "tasks": [
     {
-      "text": "asdad",
-      "module": "No Module Specified",
-      "day": "",
-      "reminder": false,
-      "id": 2
-    },
-    {
       "text": "Mini program",
       "module": "Intro to Computing",
       "day": "2022-07-24",
       "reminder": true,
       "id": 3
+    },
+    {
+      "text": "Mini program",
+      "module": "Intro to Programming",
+      "day": "2022-07-31",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "Mini program",
+      "module": "Intro to Computing",
+      "day": "2022-08-04",
+      "reminder": true,
+      "id": 5
     }
   ],
   "module": []
